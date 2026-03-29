@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xtech — iPhone Repairs Delivered to You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo" onclick="showPage('home-page')">
+      <img src="logo.png" alt="Xtech logo">
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><button onclick="showPage('home-page')" id="nav-home" class="active">Home</button></li>
+      <li><button onclick="showPage('services-page')" id="nav-services">Services</button></li>
+      <li><button onclick="showPage('contact-page')" id="nav-contact">Contact</button></li>
+      <li><button onclick="showPage('booking-page')" id="nav-booking" class="nav-cta">Book a Repair</button></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HOME -->
+  <div class="page active" id="home-page">
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-dots"></div>
+
+      <div class="hero-shape">
+        <img src="shape.png" alt="">
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          iPhone repairs,<br>
+          <span class="accent">delivered</span> to you.
+        </h1>
+
+        <p class="hero-sub">
+          Fast, reliable iPhone repair service at your location with professional technicians across Cairo and Giza.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="showPage('booking-page')">Book a Repair</button>
+          <button class="btn-secondary" onclick="showPage('services-page')">View Services</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="highlights-section">
+      <div class="highlights-grid">
+
+        <div class="highlight-item">
+          <div class="highlight-icon highlight-icon-blue">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <h3>Fix in minutes</h3>
+        </div>
+
+        <div class="highlight-item">
+          <div class="highlight-icon highlight-icon-green">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <h3>Repair Anywhere</h3>
+        </div>
+
+        <div class="highlight-item">
+          <div class="highlight-icon highlight-icon-soft">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Warranty Included</h3>
+        </div>
+
+        <div class="highlight-item">
+          <div class="highlight-icon highlight-icon-dark">
+            <i class="fa-solid fa-user-gear"></i>
+          </div>
+          <h3>Professional Technicians</h3>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="services-preview" class="services-preview-clean">
+      <span class="section-label">What we fix</span>
+      <h2 class="section-title">Popular repairs, done right</h2>
+      <p class="services-preview-sub">
+        Fast repairs for the issues people ask for most.
+      </p>
+
+      <div class="services-preview-grid">
+        <button class="service-preview-card" onclick="showPage('services-page')">
+          <div class="service-preview-icon">
+            <i class="fa-solid fa-mobile-screen"></i>
+          </div>
+          <h3>Screen</h3>
+          <p>Cracked or damaged display</p>
+        </button>
+
+        <button class="service-preview-card" onclick="showPage('services-page')">
+          <div class="service-preview-icon">
+            <i class="fa-solid fa-battery-full"></i>
+          </div>
+          <h3>Battery</h3>
+          <p>Weak battery or fast drain</p>
+        </button>
+
+        <button class="service-preview-card" onclick="showPage('services-page')">
+          <div class="service-preview-icon">
+            <i class="fa-solid fa-plug-circle-bolt"></i>
+          </div>
+          <h3>Charging Port</h3>
+          <p>Charging issues and loose port</p>
+        </button>
+
+        <button class="service-preview-card" onclick="showPage('services-page')">
+          <div class="service-preview-icon">
+            <i class="fa-solid fa-camera"></i>
+          </div>
+          <h3>Camera</h3>
+          <p>Blur, shake, or no focus</p>
+        </button>
+      </div>
+
+      <div class="services-preview-footer">
+        <p>And more repairs for iPhone & MacBook.</p>
+        <button class="btn-outline" onclick="showPage('services-page')">Explore all services →</button>
+      </div>
+    </section>
+
+    <section id="process" class="process-steps-section">
+      <h2 class="process-main-title">
+        Fix your Tech in <span>3 Steps</span>
+      </h2>
+
+      <p class="process-main-subtitle">
+        Three simple steps to get your device fixed quickly and conveniently.
+      </p>
+
+      <div class="process-cards-grid">
+        
+        <!-- Step 1 -->
+        <div class="process-card step-1">
+          <div class="process-card-top">
+            <div class="process-icon-box">
+              <i class="fa-solid fa-calendar-check"></i>
+            </div>
+            <div class="process-step-circle">1</div>
+          </div>
+
+          <h3>Book a Repair</h3>
+          <p>
+            Choose your device and issue, then send your request in a few quick steps.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-card step-2">
+          <div class="process-card-top">
+            <div class="process-icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="process-step-circle">2</div>
+          </div>
+
+          <h3>Choose Time and Place</h3>
+          <p>
+            We contact you to confirm your preferred time, location, and repair details.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-card step-3">
+          <div class="process-card-top">
+            <div class="process-icon-box">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div class="process-step-circle">3</div>
+          </div>
+
+          <h3>We Come to Fix</h3>
+          <p>
+            Our technician comes to you and completes the repair professionally on-site.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="reviews">
+      <span class="section-label">Customer reviews</span>
+      <h2 class="section-title">What our customers say</h2>
+
+      <div class="reviews-marquee">
+        <div class="reviews-track">
+          <article class="review-item review-wide">
+            <div class="review-head">
+              <span class="review-name">Ahmed M.</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p>Fast response, clean repair, and the technician was very professional from start to finish. The whole process felt organized and premium.</p>
+          </article>
+
+          <article class="review-item review-long">
+            <div class="review-head">
+              <span class="review-name">Sara R.</span>
+              <span class="review-stars">★★★★☆</span>
+            </div>
+            <p>Battery replacement was done at my office and the whole process felt smooth and organized. What I liked most was the communication before arrival and the fact that the technician worked carefully and explained what was being changed.</p>
+          </article>
+
+          <article class="review-item review-small">
+            <div class="review-head">
+              <span class="review-name">Karim H.</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p>Very respectful team.</p>
+          </article>
+
+          <article class="review-item review-wide">
+            <div class="review-head">
+              <span class="review-name">Nour F.</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p>Super clean work and quick turnaround. The phone felt right immediately after the repair.</p>
+          </article>
+
+          <article class="review-item review-long">
+            <div class="review-head">
+              <span class="review-name">Mohamed K.</span>
+              <span class="review-stars">★★★★☆</span>
+            </div>
+            <p>Charging issue got fixed without wasting time. Communication was clear and the service felt premium. I also appreciated that they tested everything properly before leaving.</p>
+          </article>
+
+          <article class="review-item review-small">
+            <div class="review-head">
+              <span class="review-name">Layla E.</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p>Quick, clean, professional.</p>
+          </article>
+
+          <article class="review-item review-wide">
+            <div class="review-head">
+              <span class="review-name">Ahmed M.</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p>Fast response, clean repair, and the technician was very professional from start to finish. The whole process felt organized and premium.</p>
+          </article>
+
+          <article class="review-item review-long">
+            <div class="review-head">
+              <span class="review-name">Sara R.</span>
+              <span class="review-stars">★★★★☆</span>
+            </div>
+            <p>Battery replacement was done at my office and the whole process felt smooth and organized. What I liked most was the communication before arrival and the fact that the technician worked carefully and explained what was being changed.</p>
+          </article>
+
+          <article class="review-item review-small">
+            <div class="review-head">
+              <span class="review-name">Karim H.</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p>Very respectful team.</p>
+          </article>
+
+          <article class="review-item review-wide">
+            <div class="review-head">
+              <span class="review-name">Nour F.</span>
+              <span class="review-stars">★★★★★</span>
+            </div>
+            <p>Super clean work and quick turnaround. The phone felt right immediately after the repair.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <h2>Ready to fix your iPhone?</h2>
+      <p>Book in under 2 minutes. We'll come to you.</p>
+      <button class="btn-white" onclick="showPage('booking-page')">Book a Repair Now</button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="logo2.png" alt="Xtech logo" class="footer-logo">
+          </div>
+          <p>
+            Fast, expert iPhone repairs delivered directly to your location.
+            Backed by warranty and professional service.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><button onclick="showPage('home-page')">Home</button></li>
+            <li><button onclick="showPage('services-page')">Services</button></li>
+            <li><button onclick="showPage('contact-page')">Contact</button></li>
+            <li><button onclick="showPage('booking-page')">Book a Repair</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><button onclick="showPage('services-page')">Screen Repair</button></li>
+            <li><button onclick="showPage('services-page')">Battery Replacement</button></li>
+            <li><button onclick="showPage('services-page')">Camera Repair</button></li>
+            <li><button onclick="showPage('services-page')">Charging Port</button></li>
+            <li><button onclick="showPage('services-page')">Speaker / Mic Repair</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><span>xtechnology@gmail.com</span></li>
+            <li><span>+20 150 542 1686</span></li>
+            <li><span>7 days · 12 AM – 10 PM</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/xtechegypt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61587525824969" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@xtechegypt?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Xtech. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SERVICES PAGE -->
+  <div class="page" id="services-page">
+  <div class="services-page-header services-minimal-header">
+    <span class="section-label">Our services</span>
+    <h1 class="section-title">Repair services</h1>
+    <p class="section-body">
+      Professional repairs for iPhone and MacBook devices.
+    </p>
+  </div>
+
+  <section class="single-bg-section services-minimal">
+    <div class="services-minimal-grid">
+
+      <div class="services-minimal-block">
+        <div class="services-minimal-top">
+          <div class="services-minimal-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div>
+            <h2>iPhone</h2>
+            <p>Most requested repairs</p>
+          </div>
+        </div>
+
+        <div class="services-minimal-list">
+          <div class="services-minimal-item">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <span>Screen </span>
+          </div>
+          <div class="services-minimal-item">
+            <i class="fa-solid fa-battery-full"></i>
+            <span>Battery</span>
+          </div>
+          <div class="services-minimal-item">
+            <i class="fa-solid fa-plug-circle-bolt"></i>
+            <span>Charging Port</span>
+          </div>
+          <div class="services-minimal-item">
+            <i class="fa-solid fa-camera"></i>
+            <span>Camera</span>
+          </div>
+          <div class="services-minimal-item">
+            <i class="fa-solid fa-volume-high"></i>
+            <span>Ear Speaker & Loud Speaker</span>
+          </div>
+          <div class="services-minimal-item">
+            <i class="fa-solid fa-mobile"></i>
+            <span>Back Glass</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-minimal-block">
+        <div class="services-minimal-top">
+          <div class="services-minimal-icon">
+            <i class="fa-solid fa-laptop"></i>
+          </div>
+          <div>
+            <h2>MacBook</h2>
+            <p>Essential repairs</p>
+          </div>
+        </div>
+
+        <div class="services-minimal-list">
+          <div class="services-minimal-item">
+            <i class="fa-solid fa-battery-three-quarters"></i>
+            <span>Battery</span>
+          </div>
+          <div class="services-minimal-item">
+            <i class="fa-solid fa-display"></i>
+            <span>Screen</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>Need a repair?</h2>
+    <p>Book now and we’ll come to you.</p>
+    <button class="btn-white" onclick="showPage('booking-page')">Book a Repair</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="logo2.png" alt="Xtech logo" class="footer-logo">
+        </div>
+        <p>
+          Fast, expert iPhone repairs delivered directly to your location.
+          Backed by warranty and professional service.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><button onclick="showPage('home-page')">Home</button></li>
+          <li><button onclick="showPage('services-page')">Services</button></li>
+          <li><button onclick="showPage('contact-page')">Contact</button></li>
+          <li><button onclick="showPage('booking-page')">Book a Repair</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><button onclick="showPage('services-page')">Screen Repair</button></li>
+          <li><button onclick="showPage('services-page')">Battery Replacement</button></li>
+          <li><button onclick="showPage('services-page')">Camera Repair</button></li>
+          <li><button onclick="showPage('services-page')">Charging Port</button></li>
+          <li><button onclick="showPage('services-page')">Speaker / Mic Repair</button></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><span>xtechnology@gmail.com</span></li>
+          <li><span>+20 150 542 1686</span></li>
+          <li><span>7 days · 12 AM – 10 PM</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/xtechegypt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61587525824969" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.tiktok.com/@xtechegypt?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Xtech. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+
+  <!-- CONTACT PAGE -->
+  <div class="page" id="contact-page">
+    <div class="contact-page-header">
+      <span class="section-label">Get in touch</span>
+      <h1 class="section-title">Contact Us</h1>
+      <p class="section-body">Have a question, need a quote, or just want to say hello? Fill in the form or reach us directly.</p>
+    </div>
+
+    <section class="single-bg-section">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-ico">📍</div>
+            <div class="contact-item-text">
+              <h4>Location</h4>
+              <p>Egypt</p>
+              <small>We travel to your location in Cairo and Giza</small>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-ico">📞</div>
+            <div class="contact-item-text">
+              <h4>Phone</h4>
+              <p>+20 150 542 1686</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-ico">✉️</div>
+            <div class="contact-item-text">
+              <h4>Email</h4>
+              <p>xtechnology@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-ico">🕐</div>
+            <div class="contact-item-text">
+              <h4>Working Hours</h4>
+              <p>7 days a week</p>
+              <small>12:00 AM – 10:00 PM</small>
+            </div>
+          </div>
+        </div>
+
+        <div id="contactFormWrap">
+          <div class="form-card">
+            <h3 class="form-title">Send us a message</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Ahmed" id="cfirst"/>
+              </div>
+
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Mohamed" id="clast"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="ahmed@example.com" id="cemail"/>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+20 100 000 0000" id="cphone"/>
+            </div>
+
+            <div class="form-group">
+              <label>Subject</label>
+              <select id="csubject">
+                <option value="">Select a topic...</option>
+                <option>Repair Inquiry</option>
+                <option>Warranty Claim</option>
+                <option>General Question</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea placeholder="Tell us about your issue or question..." id="cmessage"></textarea>
+            </div>
+
+            <button class="btn-primary form-submit-full" onclick="submitContact()" id="contactSubmitBtn">Send Message</button>
+          </div>
+        </div>
+
+        <div class="form-success" id="contactSuccess">
+          <div class="success-check">✅</div>
+          <h3>Message sent!</h3>
+          <p>We'll get back to you within a few hours. Thank you for reaching out to Xtech.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="logo2.png" alt="Xtech logo" class="footer-logo">
+          </div>
+          <p>
+            Fast, expert iPhone repairs delivered directly to your location.
+            Backed by warranty and professional service.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><button onclick="showPage('home-page')">Home</button></li>
+            <li><button onclick="showPage('services-page')">Services</button></li>
+            <li><button onclick="showPage('contact-page')">Contact</button></li>
+            <li><button onclick="showPage('booking-page')">Book a Repair</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><button onclick="showPage('services-page')">Screen Repair</button></li>
+            <li><button onclick="showPage('services-page')">Battery Replacement</button></li>
+            <li><button onclick="showPage('services-page')">Camera Repair</button></li>
+            <li><button onclick="showPage('services-page')">Charging Port</button></li>
+            <li><button onclick="showPage('services-page')">Speaker / Mic Repair</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><span>xtechnology@gmail.com</span></li>
+            <li><span>+20 150 542 1686</span></li>
+            <li><span>7 days · 12 AM – 10 PM</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/xtechegypt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61587525824969" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@xtechegypt?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Xtech. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- BOOKING PAGE -->
+  <div class="page" id="booking-page">
+    <div class="booking-page-header">
+      <span class="section-label">Book a repair</span>
+      <h1 class="section-title">Schedule Your Repair</h1>
+      <p class="section-body">Fill in your details and our team will contact you to confirm the booking.</p>
+    </div>
+
+    <section class="single-bg-section">
+      <div class="booking-layout">
+        <div class="booking-card" id="bookingFormWrap">
+          <div class="booking-confirm" id="bookingConfirm">
+            <div class="big-check">🎉</div>
+            <h2>Booking Sent Successfully</h2>
+            <p>Your request has been received and our team will contact you shortly.</p>
+            <div class="booking-details-card" id="bookingConfirmDetails"></div>
+            <button class="btn-secondary booking-back-btn" onclick="showPage('home-page')">Back to Home</button>
+          </div>
+
+          <div id="bookingSteps">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" id="b-name" placeholder="Full name" oninput="updateSummary()"/>
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="b-phone" placeholder="+20 100 000 0000"/>
+            </div>
+
+            <div class="form-group">
+              <label>iPhone Model</label>
+              <input type="text" id="b-model" placeholder="Example: iPhone 13 Pro Max" oninput="updateSummary()"/>
+            </div>
+
+            <div class="form-group">
+              <label>Repair Needed</label>
+              <select id="b-repair" onchange="updateSummary()">
+                <option value="">Select repair type...</option>
+                <option>Screen Replacement</option>
+                <option>Battery Replacement</option>
+                <option>Camera Repair</option>
+                <option>Charging Port</option>
+                <option>Speaker / Mic Repair</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Your Address / Location</label>
+              <input type="text" id="b-address" placeholder="Street, area, city..." oninput="updateSummary()"/>
+            </div>
+
+            <div class="form-group">
+              <label>Preferred Date</label>
+              <input type="date" id="b-date" onchange="updateSummary()"/>
+            </div>
+
+            <div class="form-group">
+              <label>Choose a Time Slot</label>
+              <div class="time-slots" id="timeSlots">
+                <div class="slot" onclick="selectSlot(this,'1:00 PM')">1:00 PM</div>
+                <div class="slot" onclick="selectSlot(this,'2:00 PM')">2:00 PM</div>
+                <div class="slot" onclick="selectSlot(this,'3:00 PM')">3:00 PM</div>
+                <div class="slot" onclick="selectSlot(this,'4:00 PM')">4:00 PM</div>
+                <div class="slot" onclick="selectSlot(this,'5:00 PM')">5:00 PM</div>
+                <div class="slot" onclick="selectSlot(this,'6:00 PM')">6:00 PM</div>
+                <div class="slot" onclick="selectSlot(this,'7:00 PM')">7:00 PM</div>
+                <div class="slot" onclick="selectSlot(this,'8:00 PM')">8:00 PM</div>
+              </div>
+            </div>
+
+            <div class="form-group form-group-no-margin">
+              <label>Additional Notes</label>
+              <textarea id="b-notes" placeholder="Any details that'll help our technician..."></textarea>
+            </div>
+
+            <button class="btn-primary form-submit-full booking-submit-btn" onclick="submitBooking()" id="bookingSubmitBtn">
+              Confirm Booking
+            </button>
+          </div>
+        </div>
+
+        <div class="booking-summary-card">
+          <h3>Booking Summary</h3>
+
+          <div class="summary-row">
+            <span class="label">Name</span>
+            <span class="value" id="sum-name">—</span>
+          </div>
+
+          <div class="summary-row">
+            <span class="label">Device</span>
+            <span class="value" id="sum-model">—</span>
+          </div>
+
+          <div class="summary-row">
+            <span class="label">Repair</span>
+            <span class="value" id="sum-repair">—</span>
+          </div>
+
+          <div class="summary-row">
+            <span class="label">Location</span>
+            <span class="value" id="sum-loc">—</span>
+          </div>
+
+          <div class="summary-row">
+            <span class="label">Date</span>
+            <span class="value" id="sum-date">—</span>
+          </div>
+
+          <div class="summary-row">
+            <span class="label">Time</span>
+            <span class="value" id="sum-time">—</span>
+          </div>
+
+          <div class="guarantee-box">
+            <p>✓ Booking confirmed before visit<br>✓ Warranty included<br>✓ Payment on completion</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo-wrap">
+            <img src="logo2.png" alt="Xtech logo" class="footer-logo">
+          </div>
+          <p>
+            Fast, expert iPhone repairs delivered directly to your location.
+            Backed by warranty and professional service.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><button onclick="showPage('home-page')">Home</button></li>
+            <li><button onclick="showPage('services-page')">Services</button></li>
+            <li><button onclick="showPage('contact-page')">Contact</button></li>
+            <li><button onclick="showPage('booking-page')">Book a Repair</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><button onclick="showPage('services-page')">Screen Repair</button></li>
+            <li><button onclick="showPage('services-page')">Battery Replacement</button></li>
+            <li><button onclick="showPage('services-page')">Camera Repair</button></li>
+            <li><button onclick="showPage('services-page')">Charging Port</button></li>
+            <li><button onclick="showPage('services-page')">Speaker / Mic Repair</button></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><span>xtechnology@gmail.com</span></li>
+            <li><span>+20 150 542 1686</span></li>
+            <li><span>7 days · 12 AM – 10 PM</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/xtechegypt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61587525824969" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@xtechegypt?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Xtech. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
